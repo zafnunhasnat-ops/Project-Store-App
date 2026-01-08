@@ -31,13 +31,13 @@ class ProductsController < ApplicationController
       render :edit, status: :unprocessable_entity
     end
   end
-  
+
     def destroy
     @product.destroy
     redirect_to products_path
   end
 
-  
+
   private
     def set_product
       @product = Product.find(params[:id])
